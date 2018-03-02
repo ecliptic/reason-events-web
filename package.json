@@ -1,0 +1,124 @@
+{
+  "name": "@ecliptic/reason-events-web",
+  "description": "The Reason Events hybrid React client",
+  "version": "0.1.0",
+  "author": "Brandon Konkle <brandon@ecliptic.io> (http://ecliptic.io)",
+  "license": "BSD-2-Clause",
+  "keywords": [
+    "gatsby"
+  ],
+  "scripts": {
+    "build": "yarn build.re && VIPS_WARNING=false dotenv gatsby build",
+    "build.re": "bsb -make-world",
+    "build.re.clean": "bsb -clean-world",
+    "build.re.watch": "yarn build.re -w",
+    "dev": "yarn build.re && VIPS_WARNING=false dotenv gatsby develop",
+    "test.watch": "jest --watch",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@ecliptic/mnstr": "*",
+    "@babel/core": "^7.0.0-beta.40",
+    "@babel/preset-react": "^7.0.0-beta.40",
+    "@glennsl/bs-json": "^1.1.2",
+    "apollo-cache-inmemory": "^1.1.9",
+    "apollo-client": "^2.2.5",
+    "apollo-client-preset": "^1.0.8",
+    "apollo-link": "^1.2.1",
+    "apollo-link-context": "^1.0.7",
+    "apollo-link-error": "^1.0.7",
+    "apollo-link-http": "^1.5.2",
+    "axios": "^0.18.0",
+    "babel-eslint": "8",
+    "babel-plugin-jsx-display-if": "^3.0.0",
+    "babel-plugin-module-resolver": "^3.1.0",
+    "babel-polyfill": "^6.26.0",
+    "bs-abstract": "^0.12.0",
+    "bs-axios": "^0.0.29",
+    "bs-css": "^6.3.1",
+    "bs-moment": "^0.2.4",
+    "bs-platform": "^2.2.2",
+    "bs-react-helmet": "^0.2.1",
+    "bs-webapi": "^0.8.3",
+    "color": "^3.0.0",
+    "dotenv-cli": "^1.4.0",
+    "gatsby": "^1.9.221",
+    "gatsby-cli": "^1.1.45",
+    "gatsby-image": "^1.0.40",
+    "gatsby-link": "^1.6.38",
+    "gatsby-plugin-create-client-paths": "^1.0.6",
+    "gatsby-plugin-feed": "^1.3.19",
+    "gatsby-plugin-glamor": "^1.6.13",
+    "gatsby-plugin-offline": "^1.0.15",
+    "gatsby-plugin-react-helmet": "^2.0.6",
+    "gatsby-plugin-sharp": "^1.6.37",
+    "gatsby-react-router-scroll": "^1.0.12",
+    "gatsby-source-filesystem": "^1.5.25",
+    "gatsby-transformer-sharp": "^1.6.22",
+    "glamor": "^2.20.40",
+    "graphql": "0.11.7",
+    "graphql-tag": "^2.8.0",
+    "graphql_ppx": "^0.2.1",
+    "he": "^1.1.1",
+    "isomorphic-fetch": "^2.2.1",
+    "localstorage-polyfill": "^1.0.1",
+    "moment": "^2.20.1",
+    "prop-types": "^15.6.1",
+    "query-string": "^5.1.0",
+    "react": "^16.2.0",
+    "react-apollo": "^2.0.4",
+    "react-helmet": ">=5.2.0",
+    "react-mdc-web": "^0.17.0",
+    "react-redux": "^5.0.7",
+    "react-router-dom": "^4.2.2",
+    "reason-apollo": "^0.6.17",
+    "reason-react": "^0.3.2",
+    "redux": "^3.7.2",
+    "redux-devtools-extension": "^2.13.2",
+    "slash": "^1.0.0",
+    "stripe": "^5.5.0",
+    "to-snake-case": "^1.0.0"
+  },
+  "devDependencies": {
+    "eslint": "4.x",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-config-standard-react": "^6.0.0",
+    "eslint-import-resolver-babel-module": "^4.0.0",
+    "eslint-plugin-brackets": "^0.1.3",
+    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-node": ">=6.0.1",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-react": "^7.7.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "husky": "^0.14.3",
+    "lint-staged": "^7.0.0"
+  },
+  "jest": {
+    "testURL": "http://localhost",
+    "testPathIgnorePatterns": [
+      "<rootDir>/lib/"
+    ],
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga|css)$": "identity-obj-proxy"
+    },
+    "unmockedModulePathPatterns": [
+      "<rootDir>/node_modules/react",
+      "<rootDir>/node_modules/react-dom",
+      "<rootDir>/node_modules/react-addons-test-utils"
+    ]
+  },
+  "resolutions": {
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "graphql": "0.11.7"
+  },
+  "lint-staged": {
+    "src/**/*.re": [
+      "refmt --in-place",
+      "git add"
+    ],
+    "src/**/*.{js,jsx}": [
+      "eslint"
+    ]
+  }
+}

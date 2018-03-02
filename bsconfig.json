@@ -1,0 +1,32 @@
+{
+  "name": "@ecliptic/reason-events-web",
+  "package-specs": {
+    "module": "commonjs",
+    "in-source": true
+  },
+  "suffix": ".bs.js",
+  "sources": [
+    {
+      "dir": "src",
+      "subdirs": true
+    }
+  ],
+  "bs-dependencies": [
+    "@ecliptic/mnstr",
+    "@glennsl/bs-json",
+    "reason-react",
+    "bs-abstract",
+    "bs-axios",
+    "bs-moment",
+    "bs-css",
+    "bs-webapi",
+    "bs-react-helmet",
+    "reason-apollo"
+  ],
+  "reason": {
+    "react-jsx": 2
+  },
+  "ppx-flags": ["graphql_ppx/ppx"],
+  "bsc-flags": ["-bs-super-errors"],
+  "refmt": 3
+}

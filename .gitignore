@@ -1,0 +1,17 @@
+# Project dependencies
+.cache/
+
+# Build directory
+public/
+.DS_Store
+yarn-error.log
+
+# Other
+lib
+.env
+
+node_modules
+
+# Ocaml / Reason
+.merlin
+.bsb.lock

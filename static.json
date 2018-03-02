@@ -1,0 +1,92 @@
+{
+  "root": "public/",
+  "error_page": "/404.html",
+  "https_only": true,
+  "headers": {
+    "/**": {
+      "Cache-Control": "public, max-age=0, must-revalidate"
+    },
+    "/static/**": {
+      "Cache-Control": "public, max-age=31536000, immutable"
+    }
+  },
+  "routes": {
+    "/events/**": "/events/index.html",
+    "/trailmap/**": "/trailmap/index.html",
+    "/donate/**": "/donate/index.html"
+  },
+  "redirects": {
+    "/issues/": {
+      "url": "/policies/"
+    },
+    "/issues/colorado-promise/": {
+      "url": "/policies/colorad-promise/"
+    },
+    "/issues/safety-prevention-justice/": {
+      "url": "/policies/safety-prevention-and-justice/"
+    },
+    "/issues/heath-and-safety/": {
+      "url": "/policies/health-safety/"
+    },
+    "/issues/clean-colorado/": {
+      "url": "/policies/clean-colorado/"
+    },
+    "/issues/rights/": {
+      "url": "/policies/fighting-for-our-rights/"
+    },
+    "/issues/great-schools/": {
+      "url": "/policies/great-school/"
+    },
+    "/issues/taxes-infrastructure/": {
+      "url": "/policies/taxes-infrastructure/"
+    },
+    "/co-promise-announcement/": {
+      "url": "/news/co-promise-announcement/"
+    },
+    "/q3-set-records/": {
+      "url": "/news/q3-set-records/"
+    },
+    "/issues": {
+      "url": "/policies/"
+    },
+    "/issues/colorado-promise": {
+      "url": "/policies/colorad-promise/"
+    },
+    "/issues/safety-prevention-justice": {
+      "url": "/policies/safety-prevention-and-justice/"
+    },
+    "/issues/heath-and-safety": {
+      "url": "/policies/health-safety/"
+    },
+    "/issues/clean-colorado": {
+      "url": "/policies/clean-colorado/"
+    },
+    "/issues/rights": {
+      "url": "/policies/fighting-for-our-rights/"
+    },
+    "/issues/great-schools": {
+      "url": "/policies/great-school/"
+    },
+    "/issues/taxes-infrastructure": {
+      "url": "/policies/taxes-infrastructure/"
+    },
+    "/co-promise-announcement": {
+      "url": "/news/co-promise-announcement/"
+    },
+    "/q3-set-records": {
+      "url": "/news/q3-set-records/"
+    },
+    "/policies/gun-violence": {
+      "url": "/policies/gun-safety/"
+    },
+    "/policies/gun-violence/": {
+      "url": "/policies/gun-safety/"
+    },
+    "/4nomore": {
+      "url": "/policies/gun-safety/"
+    },
+    "/4nomore/": {
+      "url": "/policies/gun-safety/"
+    }
+  }
+}
