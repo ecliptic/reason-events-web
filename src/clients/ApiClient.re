@@ -1,11 +1,11 @@
 open Mnstr;
 
-let (query, mutate) = ApiClient.(query, mutate);
+let (query, mutate) = Client.(query, mutate);
 
 let client =
-  ApiClient.make(
+  Client.make(
     ~uri=Config.Api.endpoint,
-    ~getSession=ClientSession.get,
+    ~getSession=Client.BrowserSession.get,
     ~connectToDevTools=Config.Env.isDev ? Js.true_ : Js.false_,
     ()
   );

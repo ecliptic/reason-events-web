@@ -2,14 +2,17 @@
 'use strict';
 
 var Curry = require("bs-platform/lib/js/curry.js");
-var Mnstr = require("../mnstr/Mnstr.bs.js");
+var Mnstr = require("@ecliptic/mnstr/src/Mnstr.bs.js");
 var Config = require("../utils/Config.bs.js");
+var MnstrClient = require("@ecliptic/mnstr/src/client/MnstrClient.bs.js");
 
-var query = Mnstr.ApiClient[/* query */8];
+var query = Mnstr.Client[/* query */9];
 
-var mutate = Mnstr.ApiClient[/* mutate */9];
+var mutate = Mnstr.Client[/* mutate */10];
 
-var client = Curry._3(Mnstr.ApiClient[/* make */10], Config.Api[/* endpoint */0], /* Some */[Mnstr.ClientSession[/* get */1]], /* () */0);
+var match = Config.Env[/* isDev */0];
+
+var client = Curry._4(Mnstr.Client[/* make */11], Config.Api[/* endpoint */0], /* Some */[MnstrClient.BrowserSession[/* get */1]], match !== 0 ? true : false, /* () */0);
 
 exports.query = query;
 exports.mutate = mutate;
