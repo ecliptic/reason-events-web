@@ -9,9 +9,8 @@ Some components use [ReasonReact](https://github.com/reasonml/reason-react), a f
 ## Architecture
 
 * Static site with dynamic build process - Gatsby uses Server Side Rendering (SSR) to generate the static HTML during the production build process.
-* Trailmap API - persists user accounts, donation payment methods, referral links, events and rsvps, and peaks and challenges.
-* GraphQL communication - 2 separate usages - used to retrieve Gatsby build data during the build process, and to speak to the Trailmap API. The build process usage is powered by a Gatsby global `graphql` tag, and the Trailmap usage is powered by Apollo Client.
-* Authentication - we use Auth0 to manage authentication and authorization. An `id_token` and `access_token` are generated through Auth0's libraries and the Trailmap API is called to verify the credentials.
+* reason-events-api - persists user accountS and events
+* GraphQL communication - 2 separate usages - used to retrieve Gatsby build data during the build process, and to speak to the API. The build process usage is powered by a Gatsby global `graphql` tag, and the API usage is powered by Apollo Client.
 
 ## Installation
 
