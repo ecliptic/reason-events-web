@@ -12,7 +12,8 @@
     }
   ],
   "bs-dependencies": [
-    "@ecliptic/mnstr",
+    "@ecliptic/mnstr-core",
+    "@ecliptic/mnstr-client",
     "@glennsl/bs-json",
     "reason-react",
     "bs-abstract",

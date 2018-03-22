@@ -5,8 +5,8 @@ var Curry = require("bs-platform/lib/js/curry.js");
 var ApiClient = require("../clients/ApiClient.bs.js");
 var EventData = require("../data/EventData.bs.js");
 var Js_option = require("bs-platform/lib/js/js_option.js");
+var MnstrUtils = require("@ecliptic/mnstr-core/src/MnstrUtils.bs.js");
 var StateTypes = require("./StateTypes.bs.js");
-var PromiseUtils = require("../utils/PromiseUtils.bs.js");
 var Option$BsAbstract = require("bs-abstract/src/implementations/Option.bs.js");
 
 function toOption(prim) {
@@ -112,8 +112,8 @@ function eventManagement(action, dispatch, getState) {
     return /* () */0;
   } else if (match === StateTypes.Events[/* RefreshEvents */0]) {
     var arg = EventData.AllEvents[/* make */13](/* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* () */0);
-    Curry._2(PromiseUtils.Infix[/* >>= */3], (function (eta) {
-              return Curry._3(ApiClient.query, /* None */0, arg, eta);
+    Curry._2(MnstrUtils.Promise[/* Infix */8][/* >>= */3], (function (eta) {
+              return ApiClient.query(/* None */0, arg, eta);
             })(ApiClient.client), (function (param) {
             return setEventsFromResponse(dispatch, param);
           }));
@@ -123,8 +123,8 @@ function eventManagement(action, dispatch, getState) {
           event: EventData.toInput(match[1]),
           clientMutationId: /* None */0
         }, /* () */0);
-    Curry._2(PromiseUtils.Infix[/* >>= */3], (function (eta) {
-              return Curry._3(ApiClient.mutate, /* None */0, arg$1, eta);
+    Curry._2(MnstrUtils.Promise[/* Infix */8][/* >>= */3], (function (eta) {
+              return ApiClient.mutate(/* None */0, arg$1, eta);
             })(ApiClient.client), (function (param) {
             return setNewEventFromResponse(dispatch, getState, param);
           }));

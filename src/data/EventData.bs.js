@@ -1130,21 +1130,21 @@ function fromJs(input) {
 function eventById(id) {
   var arg = make(id, /* () */0);
   return (function (eta) {
-              return Curry._3(ApiClient.query, /* None */0, arg, eta);
+              return ApiClient.query(/* None */0, arg, eta);
             })(ApiClient.client);
 }
 
 function allEvents() {
   var arg = make$1(/* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* () */0);
   return (function (eta) {
-              return Curry._3(ApiClient.query, /* None */0, arg, eta);
+              return ApiClient.query(/* None */0, arg, eta);
             })(ApiClient.client);
 }
 
 function createEvent(input) {
   var arg = make$2(fromJs(input), /* () */0);
   return (function (eta) {
-              return Curry._3(ApiClient.mutate, /* None */0, arg, eta);
+              return ApiClient.mutate(/* None */0, arg, eta);
             })(ApiClient.client);
 }
 

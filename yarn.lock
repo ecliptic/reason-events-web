@@ -142,25 +142,31 @@
     lodash "^4.2.0"
     to-fast-properties "^2.0.0"
 
-"@ecliptic/mnstr@*":
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/@ecliptic/mnstr/-/mnstr-0.1.0.tgz#9d631fcd855660177d423010614c8c1e93d0fa2c"
+"@ecliptic/mnstr-client@^0.2.0":
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/@ecliptic/mnstr-client/-/mnstr-client-0.2.0.tgz#9d052f0a2da921a13a033752e9f5392ffb63ae7f"
   dependencies:
+    "@ecliptic/mnstr-core" "*"
     apollo-cache-inmemory "^1.1.9"
     apollo-client "^2.2.5"
     apollo-link "^1.2.1"
     apollo-link-context "^1.0.7"
     apollo-link-error "^1.0.7"
     apollo-link-http "^1.5.2"
+    apollo-server-express "^1.3.2"
     bs-abstract "^0.12.0"
-    bs-apollo-server-express "^0.3.1"
-    bs-express "^0.4.1"
+    bs-graphql "^0.3.1"
     graphql "^0.13.1"
     graphql-tag "^2.8.0"
     graphql_ppx "^0.2.1"
-    isomorphic-fetch "^2.2.1"
     reason-apollo "^0.6.17"
     reason-react "^0.3.2"
+
+"@ecliptic/mnstr-core@*", "@ecliptic/mnstr-core@^0.1.0":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@ecliptic/mnstr-core/-/mnstr-core-0.1.0.tgz#0c9cbfcee0696f723cea6ae877fe599f6a2bf283"
+  dependencies:
+    bs-abstract "^0.12.0"
 
 "@glennsl/bs-json@^1.1.2":
   version "1.1.2"
@@ -702,7 +708,7 @@ apollo-server-core@^1.3.2:
     apollo-tracing "^0.1.0"
     graphql-extensions "^0.0.x"
 
-apollo-server-express@^1.1.0:
+apollo-server-express@^1.3.2:
   version "1.3.2"
   resolved "https://registry.yarnpkg.com/apollo-server-express/-/apollo-server-express-1.3.2.tgz#0ff8201c0bf362804a151e1399767dae6ab7e309"
   dependencies:
@@ -2179,14 +2185,6 @@ bs-abstract@^0.12.0:
   version "0.12.0"
   resolved "https://registry.yarnpkg.com/bs-abstract/-/bs-abstract-0.12.0.tgz#73e0db7d4b01ecec613c5b331f95571736412a75"
 
-bs-apollo-server-express@^0.3.1:
-  version "0.3.1"
-  resolved "https://registry.yarnpkg.com/bs-apollo-server-express/-/bs-apollo-server-express-0.3.1.tgz#85d5b7ef7355a0a0c73144d98610882172a83a34"
-  dependencies:
-    apollo-server-express "^1.1.0"
-    bs-express "^0.0.2"
-    bs-graphql "^0.3.1"
-
 bs-axios@^0.0.29:
   version "0.0.29"
   resolved "https://registry.yarnpkg.com/bs-axios/-/bs-axios-0.0.29.tgz#470501464cf4d98cc7da3835fd0e28982f6e7fbe"
@@ -2198,18 +2196,6 @@ bs-css@^6.3.1:
   resolved "https://registry.yarnpkg.com/bs-css/-/bs-css-6.3.1.tgz#4ee1cd5ee2a41c07a1b5b8b1017fd581740f6a76"
   dependencies:
     glamor "^2.0.0"
-
-bs-express@^0.0.2:
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/bs-express/-/bs-express-0.0.2.tgz#5ac7ecf342ac97528eba756c23c4e3adb2035936"
-  dependencies:
-    express "^4.14.0"
-
-bs-express@^0.4.1:
-  version "0.4.1"
-  resolved "https://registry.yarnpkg.com/bs-express/-/bs-express-0.4.1.tgz#36a0dbf47cc4b3eb330bafdfb9b28193fea9a15d"
-  dependencies:
-    express "^4.16.2"
 
 bs-graphql@^0.3.1:
   version "0.3.1"
@@ -4102,7 +4088,7 @@ express-graphql@^0.6.6:
     http-errors "^1.3.0"
     raw-body "^2.3.2"
 
-express@^4.13.3, express@^4.14.0, express@^4.16.2:
+express@^4.13.3, express@^4.14.0:
   version "4.16.2"
   resolved "https://registry.yarnpkg.com/express/-/express-4.16.2.tgz#e35c6dfe2d64b7dca0a5cd4f21781be3299e076c"
   dependencies:

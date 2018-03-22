@@ -17,7 +17,8 @@
     "test": "jest"
   },
   "dependencies": {
-    "@ecliptic/mnstr": "*",
+    "@ecliptic/mnstr-client": "^0.2.0",
+    "@ecliptic/mnstr-core": "^0.1.0",
     "@babel/core": "^7.0.0-beta.40",
     "@babel/preset-react": "^7.0.0-beta.40",
     "@glennsl/bs-json": "^1.1.2",

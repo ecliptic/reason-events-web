@@ -65,7 +65,7 @@ let setNewEventFromResponse = (~dispatch, ~getState, response) => {
 };
 
 let eventManagement = (~action, ~dispatch, ~getState) =>
-  PromiseUtils.Infix.(
+  Mnstr.Utils.Promise.Infix.(
     switch (action##reAction |> toOption) {
     /* Refresh events */
     | Some(Events.RefreshEvents) =>

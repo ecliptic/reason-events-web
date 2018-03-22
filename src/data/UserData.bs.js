@@ -192,7 +192,7 @@ var UserById = /* module */[
 function userById(id) {
   var arg = make(id, /* () */0);
   return (function (eta) {
-              return Curry._3(ApiClient.query, /* None */0, arg, eta);
+              return ApiClient.query(/* None */0, arg, eta);
             })(ApiClient.client);
 }
 
